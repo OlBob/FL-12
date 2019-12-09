@@ -97,7 +97,7 @@ li.box.box-bg:hover h2 {
     font-style: italic;
 }
 
-body>div>div.tm-main-content>section.heading.tm-content-box>div>h2 {
+section.heading.tm-content-box>div>h2 {
     text-align: center;
     color: lightskyblue;
 }
