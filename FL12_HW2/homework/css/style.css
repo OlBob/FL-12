@@ -30,41 +30,7 @@ div.tm-sidebar>nav>ul>li:hover a {
 }
 
 p.tm-banner-text {
-    transform: translateX(200px);
-    box-shadow: #333;
     text-shadow: 5px 5px 3px #333;
-    animation: slide-left 4.9s ease-out infinite forwards;
-}
-
-@keyframes slide-left {
-    0% {
-        -webkit-transform: translateX(200px);
-        transform: translateX(200px);
-    }
-
-    75% {
-        -webkit-transform: translateX(0px);
-        transform: translateX(0px);
-        opacity: 1;
-    }
-
-    95% {
-        -webkit-transform: translateX(0px);
-        transform: translateX(0px);
-        opacity: 1;
-    }
-
-    96% {
-        -webkit-transform: translateX(0px);
-        transform: translateX(0px);
-        opacity: 0;
-    }
-
-    100% {
-        -webkit-transform: translateX(0px);
-        transform: translateX(0px);
-        opacity: 0;
-    }
 }
 
 .tm-content-box.flex-2-col {
@@ -184,7 +150,40 @@ button.btn.btn-primary.submit-btn {
 button.btn.btn-primary.submit-btn:hover {
     color: #ffffff;
     background-color: lightskyblue;
-    border-color: lightskyblue;
+    /* border-color: lightskyblue; */
+}
+
+@media screen{
+    p.tm-banner-text {
+        transform: translateX(200px);
+        animation: slide-left 4.9s ease-out infinite forwards;
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(200px);
+    }
+
+    75% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+    95% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+    96% {
+        transform: translateX(0px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 0;
+    }
 }
 
 @media print {
@@ -202,11 +201,6 @@ button.btn.btn-primary.submit-btn:hover {
 
     #home {
         background: unset;
-    }
-
-    p.tm-banner-text {
-        transform: translateX(0px);
-        animation: unset;
     }
 
     .tm-section-description {
