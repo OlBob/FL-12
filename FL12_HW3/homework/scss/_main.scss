@@ -1,1 +1,37 @@
 // Write your styles here
+@mixin greenButton {
+    width: 140px;
+    height: 50px;
+    background-color: map-get($colors, buttonColor);
+    color: map-get($colors, mainColorFont);
+    font-size: 1.2em;
+    font-family: $font-family1;
+    font-weight: 600;
+    border-radius: 4px;
+    border: 0;
+}
+
+@mixin linkStyle($fontSize: 1em, $opacity: .7) {
+    font-size: $fontSize;
+    font-family: $font-family1;
+    text-align: center;
+    color: map-get($colors, mainColorFont);
+    opacity: $opacity;
+}
+
+@mixin after($left, $right, $top, $bottom, $width, $height) {
+    content: '';
+    position: absolute;
+    left: $left;
+    right: $right;
+    top: $top;
+    bottom: $bottom;
+    width: $width;
+    height: $height;
+    background: map-get($colors, highlightColor);
+    z-index: -1;
+}
+
+@mixin opacity($opacity: .7) {
+    opacity: $opacity;    
+}

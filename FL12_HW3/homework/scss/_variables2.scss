@@ -1,0 +1,16 @@
+$font-family1: 'Source Sans Pro', sans-serif;
+$font-family2: 'Hind', sans-serif;
+$font-family3: 'Fresca', sans-serif;
+
+$colors: (
+    mainColor: #20232e,
+    mainColorFont: #fff,
+    secondColor: #3b3f50,
+    highlightColor: #ff4e33,
+    buttonColor: #e3ac00
+);
+
+$headerBG: url(../img/m-h-night.jpg);
+$borderRadius: 7px;
+$fwBold: bold;
+$gradient: linear-gradient(to right, map-get($colors, buttonColor), #922b52);

@@ -1,0 +1,199 @@
+body {
+  margin: 0;
+  width: 1920px;
+  background-color: #20232e;
+  color: #fff; }
+  body .landing-logo {
+    margin-top: 1em;
+    display: flex; }
+    body .landing-logo img {
+      width: 45px;
+      height: 45px; }
+    body .landing-logo p {
+      margin: 6px 15px 0;
+      text-align: center;
+      font-size: 1.5em;
+      font-family: "Fresca", sans-serif;
+      font-weight: bold;
+      line-height: 1em;
+      opacity: 1; }
+      body .landing-logo p span {
+        display: block;
+        font-size: 0.4em; }
+  body .header {
+    width: 100%;
+    background: url(../img/m-h-night.jpg);
+    background-size: 1920px;
+    background-position: 50% 46%;
+    border-bottom-right-radius: 50%; }
+    body .header .header-wrap {
+      width: 650px;
+      display: flex;
+      flex-direction: column;
+      padding: 0 12em 9em; }
+      body .header .header-wrap p.header_heading {
+        position: relative;
+        font-size: 70px;
+        font-weight: bold;
+        font-family: "Source Sans Pro", sans-serif;
+        line-height: 1.1em;
+        z-index: 1;
+        opacity: 1; }
+        body .header .header-wrap p.header_heading:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: unset;
+          top: unset;
+          bottom: 7px;
+          width: 294px;
+          height: 52px;
+          background: #ff4e33;
+          z-index: -1; }
+      body .header .header-wrap .header_text {
+        font-family: "Fresca", sans-serif;
+        line-height: 1.5em;
+        white-space: pre-line;
+        margin-top: -2em;
+        margin-bottom: 3em;
+        opacity: 1; }
+      body .header .header-wrap div:last-child {
+        display: flex;
+        justify-content: space-between; }
+        body .header .header-wrap div:last-child button.header_button {
+          width: 140px;
+          height: 50px;
+          background-color: #e3ac00;
+          color: #fff;
+          font-size: 1.2em;
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: 600;
+          border-radius: 4px;
+          border: 0; }
+        body .header .header-wrap div:last-child .login {
+          font-size: 1.3em;
+          font-family: "Source Sans Pro", sans-serif;
+          text-align: center;
+          color: #fff;
+          opacity: 1;
+          margin: auto; }
+  body main.section {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    body main.section p.section_text:first-child {
+      position: relative;
+      text-align: center;
+      font-family: "Hind", sans-serif;
+      font-size: 2.7em;
+      font-weight: bold;
+      opacity: 1;
+      margin: .8em; }
+      body main.section p.section_text:first-child:after {
+        content: '';
+        position: absolute;
+        left: unset;
+        right: 353px;
+        top: unset;
+        bottom: 20px;
+        width: 195px;
+        height: 52px;
+        background: #ff4e33;
+        z-index: -1; }
+    body main.section .section_card_wrap {
+      margin: 0 auto;
+      width: 1110px; }
+      body main.section .section_card_wrap .section_card {
+        display: flex;
+        flex-direction: row;
+        background-color: #3b3f50;
+        color: #fff;
+        font-family: "Fresca", sans-serif;
+        padding: 20px;
+        border-radius: 7px;
+        margin-bottom: 25px; }
+        body main.section .section_card_wrap .section_card .section_card_img {
+          width: 460px;
+          border-radius: 7px; }
+        body main.section .section_card_wrap .section_card .section_card_right_container {
+          margin: auto;
+          width: 460px;
+          display: flex;
+          flex-direction: column; }
+          body main.section .section_card_wrap .section_card .section_card_right_container p.section_card_heading {
+            text-align: center;
+            font-family: "Hind", sans-serif;
+            font-size: 1.5em;
+            font-weight: bold; }
+          body main.section .section_card_wrap .section_card .section_card_right_container p.section_card_text {
+            margin: 1.5em 0;
+            text-align: justify;
+            line-height: 1.5em;
+            opacity: 0.7; }
+          body main.section .section_card_wrap .section_card .section_card_right_container a.section_link {
+            font-size: 1em;
+            font-family: "Source Sans Pro", sans-serif;
+            text-align: center;
+            color: #fff;
+            opacity: 0.7; }
+    body main.section .section_banner {
+      background: linear-gradient(to right, #e3ac00, #922b52);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 1.7em 0;
+      border-radius: 7px;
+      transform: translateY(5.4em); }
+      body main.section .section_banner div.section_banner_text_wrap p.section_banner_heading {
+        font-size: 2em;
+        color: #fff;
+        font-weight: bold;
+        font-family: "Source Sans Pro", sans-serif;
+        margin-top: 0;
+        margin: 0 0 0.5em; }
+        body main.section .section_banner div.section_banner_text_wrap p.section_banner_heading:after {
+          content: '';
+          position: absolute;
+          left: 287px;
+          right: unset;
+          top: 18px;
+          bottom: unset;
+          width: 68px;
+          height: 52px;
+          background: #ff4e33;
+          z-index: -1; }
+      body main.section .section_banner div.section_banner_text_wrap p.section_banner_text {
+        color: #fff;
+        font-family: "Fresca", sans-serif;
+        opacity: 0.7;
+        margin-top: 0; }
+      body main.section .section_banner .section_banner_button {
+        width: 140px;
+        height: 50px;
+        background-color: #e3ac00;
+        color: #fff;
+        font-size: 1.2em;
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 600;
+        border-radius: 4px;
+        border: 0;
+        margin: auto 0; }
+  body footer.footer {
+    background: #3b3f50;
+    color: #fff;
+    padding: 8em 0 1.5em; }
+    body footer.footer .footer-wrap, body footer.footer .footer-wrap span {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      font-family: "Fresca", sans-serif; }
+      body footer.footer .footer-wrap .footer_text {
+        max-width: 310px;
+        font-size: .9em;
+        line-height: 1.4em;
+        opacity: 0.7; }
+      body footer.footer .footer-wrap span {
+        margin: auto 0;
+        opacity: 0.7; }
