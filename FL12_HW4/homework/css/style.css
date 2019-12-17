@@ -4,6 +4,7 @@ body {
   margin: 0;
   width: 100vw;
   min-width: 900px;
+  font-size: calc(10px + 6 * ((100vw - 350px) / 1350));
 }
 
 hr {
