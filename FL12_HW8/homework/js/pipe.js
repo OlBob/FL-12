@@ -1,10 +1,10 @@
-function addOne(x){
-    return x + 1;
+function addOne(x) {
+	return x + 1;
 }
 const pipe = (num, ...args) => {
 	let sum = num;
 	args.forEach(element => {
-		sum = element(sum); 
+		sum = element(sum);
 	});
 	return sum;
 };

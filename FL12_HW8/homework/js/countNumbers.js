@@ -1,7 +1,8 @@
-function makeNumber(data){
+function makeNumber(data) {
 	return data.split('').filter(elem => isFinite(elem)).join('');
 }
-function countNumbers(){
+
+function countNumbers() {
 	const array = makeNumber('erer384jj4444666888jfd123');
 	console.log(array);
 	let data = {};
