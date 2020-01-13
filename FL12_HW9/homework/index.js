@@ -1,32 +1,18 @@
-// 1. Write a function that converts the argument values. If it will be a string, convert it to number and wise versa. It should return an array of converted values.
 const convert = (...args) => {
   return args.map(elem => {
     return typeof elem === 'string' ? parseInt(elem) : elem.toString();
   });
 }
-convert('1', 2, 3, '4') // [1, '2', '3', 4]
-
-
-// 2. Write function, which iterates over array and executes function on each element.
+ 
 const executeforEach = (arr, func) => {
   return arr.map(elem => func(elem));
 }
-executeforEach([1, 2, 3], function (el) {
-  console.log(el * 2)
-}) // logs 2 4 6
 
-
-// 3. Write function, which returns transformed array based on function, which passed as a second parameter (callback). If array contains a number as string, it should convert it and return as number. You’re allowed to change a body of that callback function if you need. Reuse function from task 2.
 const mapArray = (arr, func) => {
   arr = arr.map(elem => typeof elem === 'string' ? parseInt(elem) : elem);
   return executeforEach(arr, func);
 }
-mapArray([2, '5', 8], function (el) {
-  return el + 3
-}) // returns [5, 8, 11]
 
-
-// 4. Write function, which returns filtered array based on function, which passed as a parameter. Reuse function from task 2.
 const filterArray = (arr, func) => {
   let newArr = [];
   executeforEach(arr, func).forEach(function (element, index) {
@@ -36,19 +22,11 @@ const filterArray = (arr, func) => {
   });
   return newArr;
 }
-filterArray([2, 5, 8], function (el) {
-  return el % 2 === 0
-}) // returns [2, 8]
 
-
-// 5. Write a function that reverses the string value passed into it.
 const flipOver = str => {
   return str === '' ? '' : flipOver(str.substring(1)) + str.charAt(0);
 }
-flipOver('hey world') // 'dlrow yeh'
-
-
-// 6. Write a function which creates an array from the given range of numbers
+ 
 const makeListFromRange = arr => {
   let newArr = [];
   for (let i = arr[0]; i <= arr[arr.length - 1]; i++) {
@@ -56,13 +34,7 @@ const makeListFromRange = arr => {
   }
   return newArr;
 }
-makeListFromRange([2, 7]) // [2, 3, 4, 5, 6, 7]
-
-
-
-
-// 7. Write a function that accepts an array of object and returns new array of values by passed key name.
-// That function should not change the original array. Reuse function from task 2. 
+ 
 const actors = [{
     name: 'tommy',
     age: 36
@@ -72,5 +44,45 @@ const actors = [{
     age: 28
   }
 ];
+const getArrayOfKeys = (array, key) => {
+	let nArray =[];
+	executeforEach(array, function(el) {
+		nArray.push(el[key]);
+	})
 
-//getArrayOfKeys(actors, 'name'); // ['tommy', 'lee']
+	return nArray;
+}
+ 
+const substitute = array => {
+	let num = 30;
+	return mapArray(array, el => {
+    el < num ? el = '*' : el;
+    return el;
+	})
+}
+ 
+const params ={
+  'date' : {
+    'year': 2019,
+    'month': 0,
+    'day': 2
+  },
+  'convDay' : {
+    'hours': 24,
+    'minutes': 3600,
+    'mSeconds': 1000
+  } 
+};
+const date = new Date(params.date.year, params.date.month, params.date.day);
+const getPastDay = (date, day) => {
+	let secondDate = new Date(date - day*params.convDay.hours*params.convDay.minutes*params.convDay.mSeconds);
+	return secondDate.getDate();
+}
+
+const formatDate = date => {
+  let lessThenNum = 10;
+	let tmpDate = `${date.getFullYear()}/${date.getMonth() +1}/${date.getDate()}`;
+  let tmpHours = date.getHours() < lessThenNum ? '0' + date.getHours() : date.getHours();
+  let tmpMinutes = date.getMinutes() < lessThenNum ? '0' + date.getMinutes() : date.getMinutes();
+	return `${tmpDate} ${tmpHours}:${tmpMinutes}`;
+}
