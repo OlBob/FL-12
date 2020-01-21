@@ -1,44 +1,44 @@
 class Fighter {
 	constructor(obj) {
-		this._name = obj.name;
-		this._damage = obj.damage;
-		this._hp = obj.hp;
-		this._strength = obj.strength;
-		this._agility = obj.agility;
-		this._win = 0;
-		this._loss = 0;
+		const _name = obj.name,
+				_damage = obj.damage,
+				_strength = obj.strength,
+				_agility = obj.agility;
+		let _hp = obj.hp,
+				_win = 0,
+				_loss = 0;
 
 		return {
-			getName: () => this._name,
-			getDamage: () => this._damage,
-			getStrength: () => this._strength,
-			getAgility: () => this._agility,
-			getHealth: () => this._hp,
+			getName: () => _name,
+			getDamage: () => _damage,
+			getStrength: () => _strength,
+			getAgility: () => _agility,
+			getHealth: () => _hp,
 
 			attack: (secondFighter) => {
 				const PROBABILITY = secondFighter.getStrength() + secondFighter.getAgility(),
 							VARIABLE = 101;
 				if (Math.floor(Math.random() * VARIABLE) >= PROBABILITY) {
-					console.log(`${this._name} makes ${this._damage} damage to ${secondFighter.getName()}`)
-					secondFighter.dealDamage(this._damage);
+					console.log(`${_name} makes ${_damage} damage to ${secondFighter.getName()}`)
+					secondFighter.dealDamage(_damage);
 				} else {
-					console.log(`${this._name} attack missed`);
+					console.log(`${_name} attack missed`);
 				}
 			},
 			logCombatHistory: () => {
-				console.log(`Name: ${this._name}, Wins: ${this._win}, Losses: ${this._loss}`);
+				console.log(`Name: ${_name}, Wins: ${_win}, Losses: ${_loss}`);
 			},
 			heal: (value) => {
-				this._hp += value;
+				_hp += value;
 				return;
 			},
 			dealDamage: (value) => {
-				this._hp -= value;
-				this._hp < 0 ? this._hp = 0 : this._hp;
+				_hp -= value;
+				_hp < 0 ? _hp = 0 : _hp;
 				return;
 			},
-			addWin: () => this._win++,
-			addLoss: () => this._loss++
+			addWin: () => _win++,
+			addLoss: () => _loss++
 		}
 	}
 }
