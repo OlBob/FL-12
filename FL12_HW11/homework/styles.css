@@ -1,0 +1,46 @@
+#root ul { 
+  list-style: none; 
+  padding-inline-start: 0;
+}
+#root ul li { 
+  padding-inline-start: 10px;
+}
+#root ul li div { 
+  display: inline-flex;
+}
+#root p {
+  margin: 0;
+}
+#root ul li div {
+  display: inline-flex;
+  width: 97%;
+}
+#root ul li div:hover {
+  background-color: #efefef;
+  box-shadow: -1.1em 0 0 0 #efefef;
+}
+#root ul li {
+  cursor: pointer;
+}
+.nested {
+  display: none;
+}
+#root ul li.empty {
+  padding-inline-start: 0;
+  font-style: italic;
+}
+.active {
+  display: block;
+}
+.material-icons {
+  position: relative;
+  top: 3px;
+  font-size: inherit;
+}
+
+.f-icon {
+  color: orange;
+}
+.nf-icon {
+  color: #bbb;
+}
