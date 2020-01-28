@@ -26,6 +26,48 @@ const inputItem = (text = '') => {
 let mainPage = divItem('main');
 mainPage.appendChild(buttonItem('addCard', 'add'));
 
+const createInput = () => {
+	let el = [
+		{	
+			item: 'input',
+			type: 'text',
+			placeholder: 'term'
+		},
+		{	item: 'input',
+			type: 'text',
+			placeholder: 'description'
+		},
+		{
+			item: 'button',
+			text: 'save',
+			class: 'save'
+		},
+		{
+			item: 'button',
+			text: 'delete',
+			class: 'delete'
+		}
+	]
+	let div = document.createElement('form');
+	div.classList.add('element-add');
+	el.forEach( element => {
+
+		let item = document.createElement(element.item);
+		if (element.item === 'input'){
+			item.type = element.type;
+			item.placeholder = element.placeholder;
+		} else if (element.item === 'button'){
+			item.type = element.type;
+			item.classList.add(element.class);
+			item.innerHTML = element.text;
+		}
+
+		div.appendChild(item);
+	});
+
+	return div;
+}
+
 
 
 const addPage = function (argument) {
